@@ -101,37 +101,3 @@ footer{
     border: none;
     color: white;
 }
-
-.boutonmenuprincipal {
-    background-color:white;
-    border-radius: 2px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding:20px;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    }
-    .boutonmenuprincipal:hover {
-    background-color: white;
-    }
-    .dropdown {
-    position: relative;
-    display: inline-block;
-    }
-    .dropdown-child {
-    display: none;
-    min-width: 50px;
-    justify-content: center;
-    flex-direction: column;
-    }
-    .dropdown-child a {
-    color: white;
-    padding: 20px;
-    text-decoration: none;
-    }
-    .dropdown:hover .dropdown-child {
-    display: flex;
-    flex-direction: column;
-    }
