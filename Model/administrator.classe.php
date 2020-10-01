@@ -1,8 +1,3 @@
-<!-- 
-@creator : MARQUES Simon
-@create : 24/09/2020
-@last_update :24/09/2020 -->
-
 <?php 
     
 class Administrateur{
@@ -55,6 +50,9 @@ try{
     $sth = $this->dbh->prepare($sql);
     $sth->execute();
     $dataAdmin = $sth->fetchAll(PDO::FETCH_ASSOC);
+    if(empty($dataAdmin[0])){
+        return false;
+    }
     if(password_verify($password, $dataAdmin[0]['mdp']) && $dataAdmin[0]['login'] == $login){
         return $dataAdmin[0]['mdp'];
     } else{
