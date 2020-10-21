@@ -4,8 +4,8 @@
         <title>TITRE SITE WEB</title>
         <link href="style/style.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <header class="headerPage2"> 
+    <body onload="changeHeader()">
+        <header id="headerTablette"> 
             <nav>
               <img id="logo" src="assets/sketch.png" alt="logo" />
               <div class="titleSite"><a href="index.html">TECH BLOG</a></div>
@@ -14,8 +14,8 @@
                   <a class="menu-item">Rubriques<i ></i></a>
                   <div class="dropdown">
                       <a href="page1.html">Smartphones</a>
-                      <a href="page1.html">Tablettes</a>
-                      <a href="page1.html">PC</a>
+                      <a href="page2.html">Tablettes</a>
+                      <a href="page3.html">PC</a>
                   </div>
               </div>
               <a class="menu-item">Watch Video</i></a>
@@ -24,7 +24,7 @@
             </nav>
             <section id="landing-section">
               <div id="main-text-wrapper">
-                  <h1>SMARTPHONES</h1>
+                  <h1>TABLETTES</h1>
               </div>
           </section>
         </header>
@@ -56,4 +56,9 @@
             </section>
         </main>
     </body>
+    <script type="text/javascript">
+        function changeHeader(){
+        document.getElementById("headerTablette").style.backgroundImage = "url('tablette.jpg')"; 
+        }
+    </script>
 </html>

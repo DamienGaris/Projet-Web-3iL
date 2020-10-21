@@ -1,0 +1,17 @@
+<IMAGES>
+    <IMG>
+        <NOM>New ipad Air</NOM>
+        <URL>assets/ipadAir.png</URL>
+        <DESCRIPTION>L'iPad Air 4 est en effet le tout premier produit d'Apple à intégrer la puce Apple A14, gravée avec une finesse de 5 nanomètres, et les performances de ce nouveau processeur amené à équiper les futurs modèles d'iPhone seront bien évidemment analysées de près.</DESCRIPTION>
+    </IMG>
+    <IMG>
+        <NOM>Google Pixel 4a</NOM>
+        <URL>assets/GooglePixel4a.png</URL>
+        <DESCRIPTION>Le Google Pixel 4a est un smartphone milieu de gamme équipé d'un SoC Qualcomm Snapdragon 730G, épaulé par 6 Go de RAM et 128 Go de stockage, non extensible. Il bénéficie d'un capteur photo principal de 12.2 mégapixels. Il possède une batterie de 3140 mAh rechargeable via son port USB C et d'un port jack.</DESCRIPTION>
+    </IMG>
+    <IMG>
+        <NOM>Huawei Matebook pro 13</NOM>
+        <URL>assets/huaweiMatebook.png</URL>
+        <DESCRIPTION>L'écran FullView 2K1 du HUAWEI MateBook 13 donne vie à une expérience visuelle hors du commun. Avec un taux d'occupation de l'écran de 88%, un ratio 3 : 2 et des bordures d'une extrême finesse, profitez d'une immersion totale dans un monde aux graphismes riches et aux couleurs éclatantes.</DESCRIPTION>
+    </IMG>
+</IMAGES>
