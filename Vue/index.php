@@ -62,7 +62,7 @@
               }
               xmlhttp.open("GET",url,true);
               xmlhttp.send();
-              setTimeout(showSlides,100);
+              setTimeout(showSlides,500);
             }
 
             var slideIndex = 0;

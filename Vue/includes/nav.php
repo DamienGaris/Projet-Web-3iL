@@ -12,5 +12,6 @@
     </div>
     <a class="menu-item" href="watchVideo.php">Watch Video</i></a>
     <button class="primary-button" onclick="window.location.href = 'https\://www.amazon.fr/b/?node=13921051'">Buy Now</button>
+    <button class="primary-button" onclick="window.location.href = '../Vue/loginAdmin.php'">Admin</button>
   </div>
 </nav>
