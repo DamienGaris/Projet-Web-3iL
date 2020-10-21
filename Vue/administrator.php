@@ -34,16 +34,28 @@ $log = $_SESSION['login'];
         <input id="titre" value="">
     </div>
     <div>
-        <label>Catégorie produit 1 :</label>
+        <label>Titre catégorie produit 1 :</label>
             <input  id="catPro1" value="">
     </div>
     <div>
-        <label>Catégorie produit 2 :</label>
+        <label>Description catégorie produit 1 :</label>
+            <input  id="des1" value="">
+    </div>
+    <div>
+        <label>Titre catégorie produit 2 :</label>
             <input  id="catPro2" value="">
     </div>
     <div>
-        <label>Catégorie produit 3 :</label>
+        <label>Description catégorie produit 2 :</label>
+            <input  id="des2" value="">
+    </div>
+    <div>
+        <label>Titre catégorie produit 3 :</label>
             <input  id="catPro3" value="">
+    </div>
+    <div>
+        <label>Description catégorie produit 3 :</label>
+            <input  id="des3" value="">
     </div>
     <div>
       <button onclick="updateText()">Mettre à jour le texte</button>

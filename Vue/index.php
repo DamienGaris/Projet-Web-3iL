@@ -8,6 +8,9 @@
     $dataDefault['cat1'] = 'Smartphones';
     $dataDefault['cat2'] = 'Tablettes';
     $dataDefault['cat3'] = 'PC';
+    $dataDefault['des1'] = 'En 2015, il s\'est vendu 1,4 milliard de smartphones dans le monde (source : IDC). Samsung occupait la tête des ventes suivi d\'Apple et de plusieurs marques chinoises (Huawei, Lenovo, Xiaomi).';
+    $dataDefault['des2'] = 'Tablette (de l\'anglais tablet, plaque) est le nom donné à une famille d\'ordinateurs portables dépourvus de clavier à touches et munis d\'un écran tactile, de la même dimension qu\'une feuille A4 ou plus petits. L\'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés';
+    $dataDefault['des3'] = 'Ordinateur tout-en-un que l\'on peut déplacer en raison de sa taille compacte et de la présence d\'une batterie qui lui permet de fonctionner un moment sans avoir besoin de source d\'alimentation. L\'ordinateur portable est à la fois une unité centrale, un écran, un clavier et une souris.';
   }
 ?>
 <!DOCTYPE html>
@@ -46,7 +49,15 @@
                   }
                 ?>
                 </h3>
-                <p>En 2015, il s'est vendu 1,4 milliard de smartphones dans le monde (source : IDC). Samsung occupait la tête des ventes suivi d'Apple et de plusieurs marques chinoises (Huawei, Lenovo, Xiaomi).</p>
+                <p>
+                <?php
+                  if($data === false){
+                    echo $dataDefault["des1"];
+                  }else{
+                    echo $data[0]["des1"];
+                  }
+                ?>
+                </p>
             </div>
             <div id="second-product" class="product-item">
                 <h3>
@@ -58,7 +69,15 @@
                   }
                 ?>
                 </h3>
-                <p>Tablette (de l'anglais tablet, plaque) est le nom donné à une famille d'ordinateurs portables dépourvus de clavier à touches et munis d'un écran tactile, de la même dimension qu'une feuille A4 ou plus petits. L'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés</p>
+                <p>
+                <?php
+                  if($data === false){
+                    echo $dataDefault["des2"];
+                  }else{
+                    echo $data[0]["des2"];
+                  }
+                ?>
+                </p>
             </div>
             <div id="third-product" class="product-item">
                 <h3>
@@ -70,7 +89,15 @@
                   }
                 ?>
                 </h3>
-                <p>Ordinateur tout-en-un que l'on peut déplacer en raison de sa taille compacte et de la présence d'une batterie qui lui permet de fonctionner un moment sans avoir besoin de source d'alimentation. L'ordinateur portable est à la fois une unité centrale, un écran, un clavier et une souris.</p>
+                <p>
+                <?php
+                  if($data === false){
+                    echo $dataDefault["des3"];
+                  }else{
+                    echo $data[0]["des3"];
+                  }
+                ?>
+                </p>
             </div>
         </section>
 

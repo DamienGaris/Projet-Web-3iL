@@ -131,10 +131,10 @@ class Object{
      * 
      * @return True : reussite et False : erreur
      */
-    function updateText($titre,$cat1,$cat2,$cat3){
+    function updateText($titre,$cat1,$cat2,$cat3,$des1,$des2,$des3){
         try{
             $sqlUpdateText ="UPDATE `text`
-                            SET titre = '$titre', cat1 = '$cat1', cat2 ='$cat2', cat3 = '$cat3'
+                            SET titre = '$titre', cat1 = '$cat1', cat2 ='$cat2', cat3 = '$cat3', des1 = '$des1', des2 = '$des2', des1 = '$des3'
                             WHERE id = 1";
             $succes = $this->dbh->exec($sqlUpdateText);
             if($succes == 1){
@@ -151,7 +151,7 @@ class Object{
      * 
      */
     function getText(){
-        $sqlText = "SELECT titre, cat1, cat2, cat3
+        $sqlText = "SELECT titre, cat1, cat2, cat3, des1, des2, des3
                           FROM `text`
                           WHERE id = 1";
         $sth = $this->dbh->prepare($sqlText);
