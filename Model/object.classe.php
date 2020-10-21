@@ -134,7 +134,7 @@ class Object{
     function updateText($titre,$cat1,$cat2,$cat3,$des1,$des2,$des3){
         try{
             $sqlUpdateText ="UPDATE `text`
-                            SET titre = '$titre', cat1 = '$cat1', cat2 ='$cat2', cat3 = '$cat3', des1 = '$des1', des2 = '$des2', des1 = '$des3'
+                            SET titre = '$titre', cat1 = '$cat1', cat2 ='$cat2', cat3 = '$cat3', des1 = '$des1', des2 = '$des2', des3 = '$des3'
                             WHERE id = 1";
             $succes = $this->dbh->exec($sqlUpdateText);
             if($succes == 1){

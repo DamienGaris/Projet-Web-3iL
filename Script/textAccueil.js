@@ -3,7 +3,7 @@ function updateText() {
     var catPro1 = document.getElementById("catPro1");
     var catPro2 = document.getElementById("catPro2");
     var catPro3 = document.getElementById("catPro3");
-    var des1 = document.getElementById("catPro1");
+    var des1 = document.getElementById("des1");
     var des2 = document.getElementById("des2");
     var des3 = document.getElementById("des3");
     if(titre.value === "" || catPro1.value === "" || catPro2.value === "" || catPro3.value === "" || des1.value === "" || des2.value === "" || des3.value === ""){
