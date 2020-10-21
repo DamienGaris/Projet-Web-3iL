@@ -1,5 +1,5 @@
 <?php 
-    
+
 class Administrateur{
     public $login = null;
     public $password = null;
@@ -87,7 +87,6 @@ function createAdmin($login, $mdp){
 /**
  * Suppression d'un administrateur
  * @param $login Login de l'administrateur à supprimer
- * @param $mdp Mot de pas de l'utilisateur à supprimer
  * 
  * @return $successDelete succès : true , erreur : false
  */
@@ -97,11 +96,23 @@ function deleteAdmin($login){
                     FROM administrateur
                     WHERE login = '$login'";
         $successDelete = $this->dbh->exec($sqlDelete);
-    return $successDelete;
+        return $successDelete;
     } catch(PDOException $e) {
         echo $e->getMessage();
         return false;
     }
 }
+
+/**
+ * Retourne le login de l'admin connecté
+ * 
+ * @return Login de l'admin
+ * 
+ */
+function getLoginCurrent(){
+    return $this->login;
+}
+
 }
 ?>
+

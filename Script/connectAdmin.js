@@ -1,6 +1,4 @@
 
-// document.getElementById("login").onclick = function() {connectionAdmin()};
-
 function connectionAdmin() {
 
     var idLogin = document.getElementById("login");
@@ -11,6 +9,7 @@ function connectionAdmin() {
         alert("Un des deux champs est vide !");
         idLogin.value = "";
         idMpd.value = "";
+        return;
     }
     var ajax = new XMLHttpRequest();
     var check;
@@ -43,6 +42,7 @@ function createAdmin(){
         alert("Un des deux champs est vide !");
         idLogin.value = "";
         idMpd.value = "";
+        return;
     }
     var ajax = new XMLHttpRequest();
     var check;
@@ -65,3 +65,26 @@ function createAdmin(){
     ajax.send(data); 
     }
     
+    function suppressionAdmin(login){
+        if(login === ""){
+            alert("Erreur impossible de savoir de quel administrateur il s'agit pour la suppression!");
+        }
+        var ajax = new XMLHttpRequest();
+        var check;
+        ajax.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                check = this.responseText;
+                console.log(check);
+                rep = JSON.parse(check);
+                if(rep.Check == "false"){
+                    alert(rep.Text);
+                }else{
+                    window.location.href = "../Vue/loginAdmin.php";
+                }
+            }
+        }
+        var data = "event=delete&login=" + login;
+        ajax.open("POST", "../Controller/ctrlLoginAdmin.php", true); 
+        ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        ajax.send(data); 
+    }

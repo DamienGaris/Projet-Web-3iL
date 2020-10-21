@@ -1,7 +1,3 @@
-<!--
-@creator : MARQUES Simon
-@create : 24/09/2020
-@last_update :24/09/2020-->
 
 <?php
 
@@ -57,17 +53,20 @@ class Object{
 
     /**
      * Créer un nouvel objet dans la BDD
-     * @param $prix Prix de l'objet
+     * @param $titre titre de l'objet
      * @param $prix Prix de l'objet
      * @param $description Description de l'objet
-     * @param $srcImg Chemin de l'image 
+     * @param $date Date de sortie de l'objet
+     * @param $img Chemin de l'image 
+     * @param $taille Taille de l'image
      * 
      * @return succès :true , erreur : false
      */
-    function addObject($titre,$prix, $description, $srcImg){
+    function addObject($titre,$prix, $description, $categorie, $date, $img, $taille){
         try{
-            $sqlAdd = "INSERT INTO objet(titre,prix,description,chemin_img,display)
-            VALUES('$titre','$prix','$description','$srcImg',false)";
+            var_dump($img);
+            $sqlAdd = "INSERT INTO objet(titre,prix,description,categorie,date_sortie,chemin_img,taille,display)
+            VALUES('$titre','$prix','$description','$categorie,'$date','$img','$taille',false)";
             $succesCreateObject = $this->dbh->exec($sqlAdd);
             if($succesCreateObject == 1){
                 return true;
@@ -113,6 +112,31 @@ class Object{
                         SET display = $bool
                         WHERE id = $id";
             $succes = $this->dbh->exec($sqlUpdate);
+            if($succes == 1){
+                return true;
+            }
+            return false;
+        } catch(PDOException $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Mise à jour des textes à l'accueil
+     * 
+     * @param $titre Titre
+     * @param $cat1 Catégorie de produit 1
+     * @param $cat2 Catégorie de produit 2
+     * @param $cat3 Catégorie de produit 3
+     * 
+     * @return True : reussite et False : erreur
+     */
+    function updateText($titre,$cat1,$cat2,$cat3){
+        try{
+            $sqlUpdateText ="UPDATE `text`
+                            SET titre = '$titre', cat1 = '$cat1', cat2 ='$cat2', cat3 = '$cat3'
+                            WHERE id = 1";
+            $succes = $this->dbh->exec($sqlUpdateText);
             if($succes == 1){
                 return true;
             }
