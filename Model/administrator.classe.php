@@ -1,15 +1,8 @@
-<!-- 
-@creator : MARQUES Simon
-@create : 24/09/2020
-@last_update :24/09/2020 -->
-
 <?php 
-    
+
 class Administrateur{
     public $login = null;
     public $password = null;
-    public $connect = false;
-    public $bddConnection = null;
     public $dbh =null;
 
     function __construct() {
@@ -32,13 +25,13 @@ class Administrateur{
  * @param : $login Login de l'administrateur
  */
 function dataConstruct($login,$password){
-    $connectionOrNot = $this->tryConnection($login,$password);
-    if(!$connectionOrNot){
-        return;
+    $mdpAdmin = $this->tryConnection($login,$password);
+    if($mdpAdmin == false){
+        return false;
     }
     $this->login = $login;
-    $this->password = passsword_hash($password, PASSWORD_DEFAULT);
-    $this->connect = $connectionOrNot;
+    $this->password = $mdpAdmin;
+    return true;
 }
 
 /**
@@ -57,8 +50,11 @@ try{
     $sth = $this->dbh->prepare($sql);
     $sth->execute();
     $dataAdmin = $sth->fetchAll(PDO::FETCH_ASSOC);
+    if(empty($dataAdmin[0])){
+        return false;
+    }
     if(password_verify($password, $dataAdmin[0]['mdp']) && $dataAdmin[0]['login'] == $login){
-        return true;
+        return $dataAdmin[0]['mdp'];
     } else{
         return false;
     }
@@ -80,73 +76,43 @@ function createAdmin($login, $mdp){
     $passwordHash = password_hash($mdp, PASSWORD_BCRYPT);
     $sqlCreate = "INSERT INTO administrateur (login,mdp)
                 VALUES('$login','$passwordHash')";
-    $successCreate = $this->dbh->exec($sqlCreate); /* Execute la requete pour savoir si l'insertion est ok, SUCCESS : TRUE ou ERREUR : FALSE */
+    $successCreate = $this->dbh->exec($sqlCreate); 
     return $successCreate;
 } catch(PDOException $e) {
     echo $e->getMessage();
     return false;
 }
 }
-/**
- * Recupère la liste des objets non affectées
- * 
- * @return $listNoAffect La liste des objets non affichées
- */
-function getListNoAffect(){
-    $sql = "SELECT * 
-            FROM object
-            WHERE display = true";
-    return 0; /* listNoAffect : Liste des objects non afficher*/   
-}
 
 /**
- *  Recupère la liste des objets affectées
+ * Suppression d'un administrateur
+ * @param $login Login de l'administrateur à supprimer
  * 
- * @return $listNoAffect La liste des objets affichées
+ * @return $successDelete succès : true , erreur : false
  */
-function getListAffect(){
-    $sql = "SELECT * 
-            FROM object
-            WHERE display = false";
-    return 0;/* listNoAffect : Liste des objects afficher*/   
-}
-
-/**
- * Créer un nouvel objet dans la BDD
- * @param $prix Prix de l'objet
- * @param $description Description de l'objet
- * @param $srcImg Chemin de l'image 
- * 
- * @return succès :true , erreur : false
- */
-function addObject($prix, $description, $srcImg){
+function deleteAdmin($login){
     try{
-        $sql = "INSERT INTO object
-        VALUES('$prix','$description','$srcImg',false)";
-        $succesCreateObject = 0;/* Exécution requete qui retourne true pour succes et false pour erreur */
-        return true;
+        $sqlDelete = "DELETE 
+                    FROM administrateur
+                    WHERE login = '$login'";
+        $successDelete = $this->dbh->exec($sqlDelete);
+        return $successDelete;
     } catch(PDOException $e) {
+        echo $e->getMessage();
         return false;
     }
 }
 
 /**
- * Suppression objet de la BDD
+ * Retourne le login de l'admin connecté
  * 
- * @param $id ID de l'objet 
+ * @return Login de l'admin
  * 
- * @return $succesDeleteObjet Succès : true , erreur : false
  */
-function deleteObject($id){
-    try{
-        $sql = "DELETE *
-                FROM object
-                WHERE id =$id";
-        $succesCreateObject = 0;/* Exécution requete qui retourne true pour succes et false pour erreur */
-        return true;
-    } catch(PDOException $e) {
-        return false;
-    }
+function getLoginCurrent(){
+    return $this->login;
 }
+
 }
 ?>
+
