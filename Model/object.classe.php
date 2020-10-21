@@ -145,5 +145,22 @@ class Object{
             return false;
         }
     }
+
+    /**
+     * Retourne le texte pour la page d'accueil
+     * 
+     */
+    function getText(){
+        $sqlText = "SELECT titre, cat1, cat2, cat3
+                          FROM `text`
+                          WHERE id = 1";
+        $sth = $this->dbh->prepare($sqlText);
+        $sth->execute();
+        $dataText = $sth->fetchAll(PDO::FETCH_ASSOC);
+        if(empty($dataText)){
+            return false;
+        }
+        return $dataText;
+    }
 }
 ?>
