@@ -443,7 +443,48 @@ footer{
     color: #8b8b99;
 }
 /* STORE SECTION STYLES ENDS */
+
 /*LOGIN AMDMIN PAGE DEBUT*/
+#login-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+.loginBox{
+    width: 25%;
+    text-align: center;
+    background-color: #f5f6fb;
+    padding: 40px 30px;
+    margin: 16px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    transition: box-shadow 0.3s;
+
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.button-login{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(76, 76,76);
+    padding: 9px 34px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 16px;
+    cursor: pointer;
+
+}
+
 
 /*LOGIN AMDMIN PAGE FIN*/
 
