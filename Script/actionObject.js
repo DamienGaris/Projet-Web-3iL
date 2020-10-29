@@ -45,3 +45,23 @@ function createObject(){
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     ajax.send(data); 
 }
+
+function suppressionObject(id){
+    var ajax = new XMLHttpRequest();
+    var check;
+    ajax.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            check = this.responseText;
+            rep = JSON.parse(check);
+            if(rep.Check == "false"){
+                alert(rep.Text);
+            }else{
+                window.location.href = "deleteObject.php";
+            }
+        }
+    }
+    var data = "event=delete&id="+id;
+    ajax.open("POST", "../Controller/ctrlObject.php", true); 
+    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    ajax.send(data);
+}

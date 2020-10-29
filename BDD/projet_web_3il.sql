@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 22 oct. 2020 à 10:36
+-- Généré le :  jeu. 29 oct. 2020 à 21:58
 -- Version du serveur :  5.7.17
 -- Version de PHP :  7.1.3
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `projet_web_3il`
 --
-CREATE DATABASE IF NOT EXISTS `projet_web_3il` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `projet_web_3il`;
 
 -- --------------------------------------------------------
 
@@ -41,7 +39,6 @@ CREATE TABLE `administrateur` (
 --
 
 INSERT INTO `administrateur` (`id`, `login`, `mdp`) VALUES
-(39, 'a', '$2y$10$S4Rw7YrNzLgWjf3xh8nxt.DtWxS46j8lPT3EfDlRF4GIMSUSnoQoS'),
 (35, 'admin', '$2y$10$tD8W1H8pILJtUxhLJzmxYOy.IWg4cLn3dMyUaCWL.MLkFYoVgo3Aa');
 
 -- --------------------------------------------------------
@@ -57,7 +54,7 @@ CREATE TABLE `objet` (
   `description` varchar(255) NOT NULL,
   `categorie` varchar(255) NOT NULL,
   `date_sortie` varchar(255) NOT NULL,
-  `chemin_img` varchar(255) NOT NULL,
+  `chemin_img` varchar(255) DEFAULT NULL,
   `taille` int(11) NOT NULL,
   `display` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -67,10 +64,9 @@ CREATE TABLE `objet` (
 --
 
 INSERT INTO `objet` (`id`, `titre`, `prix`, `description`, `categorie`, `date_sortie`, `chemin_img`, `taille`, `display`) VALUES
-(2, 'Titre', 15, '6', '', '', 'des', 0, 0),
-(3, 'Titre1', 15, '6', '', '', 'des', 0, 0),
-(4, 'Titre3', 15, '6', '', '', 'des', 0, 0),
-(5, 'titred', 12, 'dfsf', '', '', 'sdfsd', 0, 1);
+(24, 'Test', 150, 'des', 'tablette', '25', 'assets/backiee-98646.jpg', 50, 1),
+(23, 'Objet pc', 250, 'des', 'pc', '54', 'assets/photos-hardware-02-20090608.jpg', 60, 1),
+(22, 'Object tab', 150, 'des', 'tel', '05/25/2502', 'assets/photos-hardware-02-20090608.jpg', 50, 1);
 
 -- --------------------------------------------------------
 
@@ -94,7 +90,7 @@ CREATE TABLE `text` (
 --
 
 INSERT INTO `text` (`id`, `titre`, `cat1`, `cat2`, `cat3`, `des1`, `des2`, `des3`) VALUES
-(1, 'titre', 'cat1', 'cat2', 'cat3', 'des1', 'des2', 'des3');
+(1, 'Titre', 'cat1', 'cqsd', 'qsdqs', 'cat2', 'qsdqs', 'qsdq');
 
 --
 -- Index pour les tables déchargées
@@ -133,7 +129,7 @@ ALTER TABLE `administrateur`
 -- AUTO_INCREMENT pour la table `objet`
 --
 ALTER TABLE `objet`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT pour la table `text`
 --

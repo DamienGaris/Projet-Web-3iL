@@ -14,6 +14,14 @@
                 echo json_encode(array("Check"=>"True", "Text"=>"True"));
             }
         break;
+        case 'delete':
+            $successDeleteOrNot = $object->deleteObject($_POST['id']);
+            if(!$successDeleteOrNot){
+                echo json_encode(array("Check"=>"false", "Text"=>"Erreur lors de la suppression e l'objet!"));
+            } else{
+                echo json_encode(array("Check"=>"True"));
+            }
+        break;   
         case 'default' :
         break;
     }

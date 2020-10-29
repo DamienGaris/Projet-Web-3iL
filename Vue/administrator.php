@@ -22,7 +22,12 @@ $log = $_SESSION['login'];
   </div>
   <div>
     <p>
-        <a href="createObject.php">Création d'object</a>
+        <a href="createObject.php">Création objet</a>
+    </p>
+  </div>
+  <div>
+    <p>
+        <a href="deleteObject.php">Suppression objet</a>
     </p>
   </div>
   </br></br></br>

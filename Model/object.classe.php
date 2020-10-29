@@ -26,7 +26,7 @@ class Object{
      */
     function getObject($categorie){
         $objAffect = array();
-        $sql = "SELECT titre, prix, description,date_sortie, chemin_img, taille 
+        $sql = "SELECT id, titre, prix, description,date_sortie, chemin_img, taille 
                 FROM objet
                 WHERE display = 1
                 AND categorie = '$categorie'";
