@@ -1,7 +1,6 @@
 
 <?php
 
-
 class Object{
     public $dbh = false;
 
@@ -56,23 +55,23 @@ class Object{
      * @param $titre titre de l'objet
      * @param $prix Prix de l'objet
      * @param $description Description de l'objet
+     * @param $categorie Catégorie de l'objet
      * @param $date Date de sortie de l'objet
-     * @param $img Chemin de l'image 
      * @param $taille Taille de l'image
      * 
      * @return succès :true , erreur : false
      */
-    function addObject($titre,$prix, $description, $categorie, $date, $img, $taille){
+    function addObject($titre,$prix, $description, $categorie, $date, $taille){
         try{
-            var_dump($img);
-            $sqlAdd = "INSERT INTO objet(titre,prix,description,categorie,date_sortie,chemin_img,taille,display)
-            VALUES('$titre','$prix','$description','$categorie,'$date','$img','$taille',false)";
+            $sqlAdd = "INSERT INTO objet(titre,prix,description,categorie,date_sortie,taille,display)
+            VALUES('$titre',$prix,'$description','$categorie','$date',$taille,1)";
             $succesCreateObject = $this->dbh->exec($sqlAdd);
-            if($succesCreateObject == 1){
-                return true;
-            }
-            return false;
+            // if($succesCreateObject == 1){
+            //     return true;
+            // }
+            return $succesCreateObject;
         } catch(PDOException $e) {
+            echo $e->getMessage();
             return false;
         }
     }
@@ -161,6 +160,33 @@ class Object{
             return false;
         }
         return $dataText;
+    }
+
+    /**
+     * Enregistrement de l'image
+     * 
+     * @param $img Données de l'image
+     * 
+     * @return $succes Succès : Le chemin de l'image | Erreur : False
+     */
+    function insertImg($img){
+        try{
+            $sqlLastId = "SELECT MAX(id) AS id FROM objet";
+            $sth = $this->dbh->prepare($sqlLastId);
+            $sth->execute();
+            $lastId= $sth->fetch(PDO::FETCH_ASSOC);
+            $id = $lastId['id'];
+            $sqlUpdateImage = "UPDATE objet
+                            SET chemin_img = '$img'
+                            WHERE id = $id";
+            $succes = $this->dbh->exec($sqlUpdateImage);
+            if($succes == 1){
+                return true;
+            }
+            return false;
+        } catch(PDOException $e) {
+            return false;
+        }
     }
 }
 ?>
