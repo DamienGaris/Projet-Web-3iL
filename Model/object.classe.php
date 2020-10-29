@@ -18,36 +18,22 @@ class Object{
         }
     }
 
-    /**
-     * Recupère la liste des objets non affectées
-     * 
-     * @return $listNoAffect La liste des objets non affichées
-     */
-    function getListNoAffect(){
-        $objNoAffect = array();
-        $sql = "SELECT * 
-                FROM objet
-                WHERE display = 0";
-        $sth = $this->dbh->prepare($sql);
-        $sth->execute();
-        $objNoAffect = $sth->fetchAll(PDO::FETCH_ASSOC);
-        return $objNoAffect; 
-    }
 
     /**
      *  Recupère la liste des objets affectées
      * 
      * @return $listNoAffect La liste des objets affichées
      */
-    function getListAffect(){
+    function getObject($categorie){
         $objAffect = array();
-        $sql = "SELECT * 
+        $sql = "SELECT titre, prix, description,date_sortie, chemin_img, taille 
                 FROM objet
-                WHERE display = 1";
+                WHERE display = 1
+                AND categorie = '$categorie'";
         $sth = $this->dbh->prepare($sql);
         $sth->execute();
         $objAffect = $sth->fetchAll(PDO::FETCH_ASSOC);
-        return $objAffect;/* listNoAffect : Liste des objects afficher*/   
+        return $objAffect;
     }
 
     /**

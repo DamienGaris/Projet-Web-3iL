@@ -1,3 +1,9 @@
+<?php
+require_once('..\Model\object.classe.php');
+$object = new Object();
+$dataObject = $object->getObject('pc');
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,6 +23,15 @@
             <section id="store-section">
                 <h3>Les meilleurs PC portables du marché</h3>
                 <div id="store-items-wrapper">
+                <?php
+                for($i=0;$i<count($dataObject);$i++){
+                    echo '<div class="store-item">
+                            <img src='.$dataObject[$i]["chemin_img"].' alt="" style="width:'.$dataObject[$i]["taille"].'%;">
+                            <h3>'.$dataObject[$i]["titre"].'</h3><h2>'.$dataObject[$i]["prix"].'€</h2>
+                            <p>'.$dataObject[$i]["description"].'</p>
+                            <p>'.$dataObject[$i]["date_sortie"].'</p>';
+                }
+                ?>
                     <div class="store-item">
                         <img src="assets/macbookAir.png" alt="" style="width:40%;">
                         <h3>Macbook Air</h3><h2>1200€</h2>
