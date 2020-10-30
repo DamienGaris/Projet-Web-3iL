@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 29 oct. 2020 à 21:58
+-- Généré le :  ven. 30 oct. 2020 à 09:52
 -- Version du serveur :  5.7.17
 -- Version de PHP :  7.1.3
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administrateur` (
   `id` int(255) NOT NULL,
-  `login` varchar(25) NOT NULL,
-  `mdp` longtext NOT NULL
+  `login` varchar(25) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `mdp` longtext CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -49,12 +49,12 @@ INSERT INTO `administrateur` (`id`, `login`, `mdp`) VALUES
 
 CREATE TABLE `objet` (
   `id` int(255) NOT NULL,
-  `titre` varchar(255) NOT NULL,
+  `titre` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `prix` float NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `categorie` varchar(255) NOT NULL,
-  `date_sortie` varchar(255) NOT NULL,
-  `chemin_img` varchar(255) DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `categorie` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `date_sortie` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `chemin_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `taille` int(11) NOT NULL,
   `display` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -66,7 +66,19 @@ CREATE TABLE `objet` (
 INSERT INTO `objet` (`id`, `titre`, `prix`, `description`, `categorie`, `date_sortie`, `chemin_img`, `taille`, `display`) VALUES
 (24, 'Test', 150, 'des', 'tablette', '25', 'assets/backiee-98646.jpg', 50, 1),
 (23, 'Objet pc', 250, 'des', 'pc', '54', 'assets/photos-hardware-02-20090608.jpg', 60, 1),
-(22, 'Object tab', 150, 'des', 'tel', '05/25/2502', 'assets/photos-hardware-02-20090608.jpg', 50, 1);
+(22, 'Object tab', 150, 'des', 'tel', '05/25/2502', 'assets/photos-hardware-02-20090608.jpg', 50, 1),
+(25, 'Iphone 11 pro', 1000, 'DESCRIPTION', 'tel', 'Date sortie : 20/09/2019', 'assets/iphone11Pro.png', 30, 1),
+(26, 'Google Pixel 4a', 349, 'DESCRIPTION', 'tel', 'Date sortie : 01/10/2020', 'assets/GooglePixel4a.png', 30, 1),
+(27, 'Samsung ZFold 2', 2000, 'DESCRIPTION', 'tel', 'Date sortie : 18/09/2020', 'assets/zfold.png', 30, 1),
+(28, 'Huawei P40 pro', 680, 'DESCRIPTION', 'tel', 'Date sortie : 26/03/2020', 'assets/huaweip40pro.png', 35, 1),
+(29, 'Ipad Air 4', 669, 'DESCRIPTION', 'tablette', 'Date sortie : octobre 2020', 'assets/ipadAir2020.png', 30, 1),
+(30, 'Galaxy Tab S', 719, 'DESCRIPTION', 'tablette', 'Date sortie : 05/08/2020', 'assets/galaxytabs.png', 30, 1),
+(31, 'Huawei MatePad pro', 549, 'DESCRIPTION', 'tablette', 'Date sortie : 09/06/2020', 'assets/huaweiMatePad.png', 30, 1),
+(32, 'Microsoft Surface Pro 7', 1399, 'DESCRIPTION', 'tablette', 'Date sortie : 22/10/2019', 'assets/MicrosoftSurface.png', 40, 1),
+(33, 'Huawei Matebook pro 13', 899, 'DESCRIPTION', 'pc', 'Date sortie : 2020', 'assets/huaweiMatebook.png', 40, 1),
+(34, 'Surface Laptop 3', 1700, 'DESCRIPTION', 'pc', 'Date sortie : 22/10/2020', 'assets/asusZenbook.png', 40, 1),
+(35, 'HP Spectre x360 13', 1400, 'DESCRIPTION', 'pc', 'Date sortie : 2019', 'assets/hpSpectre.png', 40, 1),
+(36, 'Macbook Air', 1200, 'DESCRIPTION', 'pc', 'Date sortie : 15/01/2008', 'assets/macbookAir.png', 40, 1);
 
 -- --------------------------------------------------------
 
@@ -76,13 +88,13 @@ INSERT INTO `objet` (`id`, `titre`, `prix`, `description`, `categorie`, `date_so
 
 CREATE TABLE `text` (
   `id` int(255) NOT NULL,
-  `titre` varchar(255) NOT NULL,
-  `cat1` varchar(255) NOT NULL,
-  `cat2` varchar(255) NOT NULL,
-  `cat3` varchar(255) NOT NULL,
-  `des1` varchar(255) NOT NULL,
-  `des2` varchar(255) NOT NULL,
-  `des3` varchar(255) NOT NULL
+  `titre` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `cat1` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `cat2` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `cat3` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `des1` longtext CHARACTER SET utf8 COLLATE utf8_bin,
+  `des2` longtext CHARACTER SET utf8 COLLATE utf8_bin,
+  `des3` longtext CHARACTER SET utf8 COLLATE utf8_bin
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -90,7 +102,7 @@ CREATE TABLE `text` (
 --
 
 INSERT INTO `text` (`id`, `titre`, `cat1`, `cat2`, `cat3`, `des1`, `des2`, `des3`) VALUES
-(1, 'Titre', 'cat1', 'cqsd', 'qsdqs', 'cat2', 'qsdqs', 'qsdq');
+(1, 'Bienvenue sur notre blog tech', 'Smartphones', 'Tablettes', 'PC', 'En 2015, il s\'est vendu 1,4 milliard de smartphones dans le monde (source : IDC). Samsung occupait la tête des ventes suivi d\'Apple et de plusieurs marques chinoises (Huawei, Lenovo, Xiaomi).\r\n    ', 'Tablette (de l\'anglais tablet, plaque) est le nom donné à une famille d\'ordinateurs portables dépourvus de clavier à touches et munis d\'un écran tactile, de la même dimension qu\'une feuille A4 ou plus petits. L\'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés.', 'Ordinateur tout-en-un que l\'on peut déplacer en raison de sa taille compacte et de la présence d\'une batterie qui lui permet de fonctionner un moment sans avoir besoin de source d\'alimentation. L\'ordinateur portable est à la fois une unité centrale, un écran, un clavier et une souris.');
 
 --
 -- Index pour les tables déchargées
@@ -129,7 +141,7 @@ ALTER TABLE `administrateur`
 -- AUTO_INCREMENT pour la table `objet`
 --
 ALTER TABLE `objet`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT pour la table `text`
 --

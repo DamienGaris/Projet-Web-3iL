@@ -9,7 +9,7 @@
     $dataDefault['cat2'] = 'Tablettes';
     $dataDefault['cat3'] = 'PC';
     $dataDefault['des1'] = 'En 2015, il s\'est vendu 1,4 milliard de smartphones dans le monde (source : IDC). Samsung occupait la tête des ventes suivi d\'Apple et de plusieurs marques chinoises (Huawei, Lenovo, Xiaomi).';
-    $dataDefault['des2'] = 'Tablette (de l\'anglais tablet, plaque) est le nom donné à une famille d\'ordinateurs portables dépourvus de clavier à touches et munis d\'un écran tactile, de la même dimension qu\'une feuille A4 ou plus petits. L\'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés';
+    $dataDefault['des2'] = 'Tablette (de l\'anglais tablet, plaque) est le nom donné à une famille d\'ordinateurs portables dépourvus de clavier à touches et munis d\'un écran tactile, de la même dimension qu\'une feuille A4 ou plus petits. L\'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés.';
     $dataDefault['des3'] = 'Ordinateur tout-en-un que l\'on peut déplacer en raison de sa taille compacte et de la présence d\'une batterie qui lui permet de fonctionner un moment sans avoir besoin de source d\'alimentation. L\'ordinateur portable est à la fois une unité centrale, un écran, un clavier et une souris.';
   }
 ?>
@@ -29,7 +29,7 @@
                   if($data === false){
                     echo $dataDefault['titre'];
                   }else{
-                    echo $data[0]['titre'];
+                    echo utf8_encode($data[0]['titre']);
                   }
                 ?>
                 </h1>
@@ -45,7 +45,7 @@
                   if($data === false){
                     echo $dataDefault["cat1"];
                   }else{
-                    echo $data[0]["cat1"];
+                    echo utf8_encode($data[0]["cat1"]);
                   }
                 ?>
                 </h3>
@@ -54,7 +54,7 @@
                   if($data === false){
                     echo $dataDefault["des1"];
                   }else{
-                    echo $data[0]["des1"];
+                    echo utf8_encode($data[0]["des1"]);
                   }
                 ?>
                 </p>
@@ -65,7 +65,7 @@
                   if($data === false){
                     echo $dataDefault['cat2'];
                   }else{
-                    echo $data[0]['cat2'];
+                    echo utf8_encode($data[0]['cat2']);
                   }
                 ?>
                 </h3>
@@ -74,7 +74,7 @@
                   if($data === false){
                     echo $dataDefault["des2"];
                   }else{
-                    echo $data[0]["des2"];
+                    echo utf8_encode($data[0]["des2"]);
                   }
                 ?>
                 </p>
@@ -85,7 +85,7 @@
                   if($data === false){
                     echo $dataDefault['cat3'];
                   }else{
-                    echo $data[0]['cat3'];
+                    echo utf8_encode($data[0]['cat3']);
                   }
                 ?>
                 </h3>
@@ -94,7 +94,7 @@
                   if($data === false){
                     echo $dataDefault["des3"];
                   }else{
-                    echo $data[0]["des3"];
+                    echo utf8_encode($data[0]["des3"]);
                   }
                 ?>
                 </p>
@@ -126,7 +126,6 @@
                     y= x[i].getElementsByTagName("DESCRIPTION");
                     txt = txt +"<div class='description'>"+y[0].firstChild.nodeValue +"</div>";
                     txt = txt +"</div>";
-                    console.log(i);
                   }
                 }
                 document.getElementById('carrousel').innerHTML=txt;

@@ -27,31 +27,11 @@ $dataObject = $object->getObject('tel');
                 for($i=0;$i<count($dataObject);$i++){
                     echo '<div class="store-item">
                             <img src='.$dataObject[$i]["chemin_img"].' alt="" style="width:'.$dataObject[$i]["taille"].'%;">
-                            <h3>'.$dataObject[$i]["titre"].'</h3><h2>'.$dataObject[$i]["prix"].'€</h2>
-                            <p>'.$dataObject[$i]["description"].'</p>
-                            <p>'.$dataObject[$i]["date_sortie"].'</p>';
+                            <h3>'.utf8_encode($dataObject[$i]["titre"]).'</h3><h2>'.$dataObject[$i]["prix"].'€</h2>
+                            <p>'.utf8_encode($dataObject[$i]["description"]).'</p>
+                            <p>'.utf8_encode($dataObject[$i]["date_sortie"]).'</p>';
                 }
                 ?>
-                    <div class="store-item">
-                        <img src="assets/iphone11Pro.png" alt="" style="width:30%;">
-                        <h3>Iphone 11 pro</h3><h2>1000€</h2>
-                        <p>DESCRIPTION</p>
-                    </div>
-                    <div class="store-item">
-                        <img src="assets/GooglePixel4a.png" alt="" style="width:40%;">
-                        <h3>Google Pixel 4a</h3><h2>349€</h2>
-                        <p>DESCRIPTION</p>
-                    </div>
-                    <div class="store-item">
-                        <img src="assets/zfold.png" alt="" style="width:30%;">
-                        <h3>Samsung ZFold 2</h3><h2>2000€</h2>
-                        <p>DESCRIPTION</p>
-                    </div>
-                    <div class="store-item">
-                        <img src="assets/huaweip40pro.png" alt="" style="width:35%;">
-                        <h3>Huawei P40 pro</h3><h2>680€</h2>
-                        <p>DESCRIPTION</p>
-                    </div>
                 </div>
             </section>
         </main>        
