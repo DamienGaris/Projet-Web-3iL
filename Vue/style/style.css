@@ -94,6 +94,9 @@ header{
     margin-right: 16px;
     cursor: pointer;
 }
+.primary-button:hover{
+    opacity: 0.8;
+}
 .titleSite{
     font-size: x-large;
     display: flex;
@@ -451,7 +454,6 @@ footer{
 }
 .loginBox{
     width: 25%;
-
     text-align: center;
     background-color: #f5f6fb;
     padding: 40px 30px;
@@ -575,10 +577,30 @@ input{
     border-radius: 30px;
     
 }
+.back-button{
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    background-color: #a93226 ;
+    padding: 9px 34px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 16px;
+    cursor: pointer;
+    width: 32%;
+}
+.back-button:hover{
+    opacity: 0.8;
+}
 /*CONTROL ADMIN PAGE DEBUT*/
 .createProduct-main{
     height: 100%;
     background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
+}
+.createProduct-button{
+    display: flex;
+    justify-content: start;
 }
 .createProduct-section{
     width: 100%;
@@ -596,11 +618,60 @@ input{
     flex-direction: column;
     align-items: center;  
 }
-/*AJOUTER PRODUIT PAGE DEBUT*/
+/*SUPPIMER PRODUIT PAGE DEBUT*/
+.deleteProduct-main{
+    height: 100%;
+    background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
+}
+.deleteProduct-section{
+    /* width: 100%; */
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.deleteProduct-box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f5f6fb;
+    padding: 40px 30px;
+    margin: 16px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-top-right-radius: 45px;
+    transition: box-shadow 0.3s;
+}
+#table-product {
+    margin-top: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-radius: 50px;
+  }
+  
+#table-product td, #customers th {
+    border: 1px solid #ddd;
+    padding: 3px;
+  }
+  
+#table-product tr:nth-child(even){background-color: #f2f2f2;}
+  
+#table-product tr:hover {background-color: #ddd;}
+  
+#table-product th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1f618d;
+    color: white;
+}
 
 
 
-/*AJOUTER PRODUIT PAGE FIN*/
+/*SUPPRIMER PRODUIT PAGE FIN*/
 
 .youtubeLogo{
     width: 5%;

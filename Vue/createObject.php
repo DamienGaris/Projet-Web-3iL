@@ -42,7 +42,11 @@
                     <label>Taille en % (entre 30 et 40)</label>
                     <input  id="taille" value="">
                 </div>
-                <button id="login"class="button-login" type="submit" onclick="createObject()">Ajouter produit</button>
+                <div classe="createProduct-button">
+                    <button class="back-button" onclick="window.location.href = '../Vue/administrator.php'">Retour</button>
+                    <button id="login"class="button-login" type="submit" onclick="createObject()">Ajouter produit</button>
+                </div>
+                
             </div> 
         </section>
     <main>
