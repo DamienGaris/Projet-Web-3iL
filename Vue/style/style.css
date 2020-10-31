@@ -31,7 +31,7 @@ header{
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat ;
-    background-image: url("../assets/acceuil.jpg");
+    background-image: url("../assets/headerLogo.jpg");
     background-position: center center;
     background-attachment: fixed;
     opacity: 0.8;
@@ -576,10 +576,31 @@ input{
     
 }
 /*CONTROL ADMIN PAGE DEBUT*/
+.createProduct-main{
+    height: 100%;
+    background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
+}
+.createProduct-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;  
+}
+.createProduct-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;  
+}
+/*AJOUTER PRODUIT PAGE DEBUT*/
 
-/* */
 
 
+/*AJOUTER PRODUIT PAGE FIN*/
 
 .youtubeLogo{
     width: 5%;
