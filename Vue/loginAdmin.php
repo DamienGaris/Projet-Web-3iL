@@ -8,14 +8,11 @@
     <body onload="changeHeader()">
         <header id="headerAdmin"> 
           <?php include("includes/nav.php"); ?>
-          <section id="landing-section">
-            <div id="main-text-wrapper"></div>
-          </section>
         </header>
-        <main>
+        <main class="login-main">
             <section id="login-section">
                 <div class ="loginBox">
-                    <h2>Administrateur</h2>
+                    <div class ="login-title">Admin</div>
                     <div>
                         <label>Nom d'utilisateur</label>
                         <input id="login" value="">
@@ -39,8 +36,10 @@
     </body>
     <script type="text/javascript">
         function changeHeader(){
-            document.getElementById("headerAdmin").style.backgroundImage = "url('assets/admin.jpg')";
+            document.getElementById("headerAdmin").style.backgroundImage = "url()";
             document.getElementById("headerAdmin").style.opacity = "1";
+            document.getElementById("headerAdmin").style.height = "77px";
+            document.getElementById("headerAdmin").style.borderBottom = "solid 2px";
         }
     </script>
 </html>

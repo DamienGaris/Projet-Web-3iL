@@ -168,28 +168,28 @@
         </div>
 
         </section>
-        <section id="testimonials-section">
+        <section id="topProducts-section">
           <h3>Top produits du mois</h3>
-          <p id="testimonials-desc">Voici le Top des meilleurs produits sorties du mois de spetembre</p>
+          <p id="topProducts-desc">Voici le Top des meilleurs produits sorties du mois de spetembre</p>
 
-          <div id="testimonials-wrapper">
-              <div class="testimonial-item">
+          <div id="topProducts-wrapper">
+              <div class="topProducts-item">
                   <img src="assets/GooglePixel4a.png" />
-                  <p class="testimonial-message">Le Google Pixel 4a est un smartphone milieu de gamme équipé d'un SoC Qualcomm Snapdragon 730G, épaulé par 6 Go de RAM et 128 Go de stockage, non extensible. Il bénéficie d'un capteur photo principal de 12.2 mégapixels. Il possède une batterie de 3140 mAh rechargeable via son port USB C et d'un port jack.</p>
-                  <h3 class="testimonial-by">GOOGLE PIXEL 4a</h3>
-                  <p class="job-role">349 €</p>
+                  <p class="topProducts-description">Le Google Pixel 4a est un smartphone milieu de gamme équipé d'un SoC Qualcomm Snapdragon 730G, épaulé par 6 Go de RAM et 128 Go de stockage, non extensible. Il bénéficie d'un capteur photo principal de 12.2 mégapixels. Il possède une batterie de 3140 mAh rechargeable via son port USB C et d'un port jack.</p>
+                  <h3 class="topProducts-name">GOOGLE PIXEL 4a</h3>
+                  <p class="topProducts-price">349 €</p>
               </div>
-              <div class="testimonial-item">
+              <div class="topProducts-item">
                   <img src="assets/ipadAir2020.png" />
-                  <p class="testimonial-message">L'iPad Air 4 est en effet le tout premier produit d'Apple à intégrer la puce Apple A14, gravée avec une finesse de 5 nanomètres, et les performances de ce nouveau processeur amené à équiper les futurs modèles d'iPhone seront bien évidemment analysées de près.</p>
-                  <h3 class="testimonial-by">IPAD AIR 2020</h3>
-                  <p class="job-role">669 €</p>
+                  <p class="topProducts-description">L'iPad Air 4 est en effet le tout premier produit d'Apple à intégrer la puce Apple A14, gravée avec une finesse de 5 nanomètres, et les performances de ce nouveau processeur amené à équiper les futurs modèles d'iPhone seront bien évidemment analysées de près.</p>
+                  <h3 class="topProducts-name">IPAD AIR 2020</h3>
+                  <p class="topProducts-price">669 €</p>
               </div>
-              <div class="testimonial-item">
+              <div class="topProducts-item">
                   <img src="assets/asusVivobook.png" />
-                  <p class="testimonial-message">Que vous soyez au bureau ou chez vous, le ASUS VivoBook S14 est l'ultrabook qui vous plonge au coeur de chaque tâche. Son écran NanoEdge à bords ultrafins arbore un cadre de 5,7 mm grâce auquel le rapport écran/appareil s'élève à 87% pour vous offrir des graphismes plus immersifs que jamais.</p>
-                  <h3 class="testimonial-by">ASUS VIVOBOOK</h3>
-                  <p class="job-role">1000 €</p>
+                  <p class="topProducts-description">Que vous soyez au bureau ou chez vous, le ASUS VivoBook S14 est l'ultrabook qui vous plonge au coeur de chaque tâche. Son écran NanoEdge à bords ultrafins arbore un cadre de 5,7 mm grâce auquel le rapport écran/appareil s'élève à 87% pour vous offrir des graphismes plus immersifs que jamais.</p>
+                  <h3 class="topProducts-name">ASUS VIVOBOOK</h3>
+                  <p class="topProducts-price">1000 €</p>
               </div>
           </div>
         </section>

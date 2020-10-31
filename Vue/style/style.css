@@ -31,7 +31,7 @@ header{
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat ;
-    background-image: url("../assets/headerLogo.jpg");
+    background-image: url("../assets/acceuil.jpg");
     background-position: center center;
     background-attachment: fixed;
     opacity: 0.8;
@@ -268,30 +268,22 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* TESTIMONIALS SECTION STYLES START */
-#testimonials-section {
+/* TOPPROPDUCTS SECTION  START */
+#topProducts-section {
     width: 100%;
     padding-top: 75px;
     padding-bottom: 75px;
     text-align: center;
 }
 
-#testimonials-heading {
-    color: #91ac41;
-    font-size: 24px;
-    font-family: 'Caveat', cursive;
-    margin: 0;
-    margin-top: 35px;
-}
-
-#testimonials-section > h3 {
+#topProducts-section > h3 {
     font-size: 44px;
     font-weight: 600;
     margin: 0;
     margin-bottom: 8px;
 }
 
-#testimonials-desc {
+#topProducts-desc {
     max-width: 700px;
     font-size: 16px;
     font-weight: 500;
@@ -301,7 +293,7 @@ footer{
     margin-bottom: 55px;
 }
 
-#testimonials-wrapper {
+#topProducts-wrapper {
     width: 100%;
     max-width: 1140px;
     margin: 0 auto;
@@ -309,7 +301,7 @@ footer{
     align-items: center;
 }
 
-.testimonial-item {
+.topProducts-item {
     width: 25%;
     text-align: center;
     background-color: #f5f6fb;
@@ -321,17 +313,17 @@ footer{
     transition: box-shadow 0.3s;
 }
 
-.testimonial-item:hover {
+.topProducts-item:hover {
     box-shadow: 0 12px 16px 0 rgba(39,39,47,0.06);
 }
 
-.testimonial-item img {
+.topProducts-item img {
     width: 80px;
     margin-bottom: 25px;
     border-radius: 50%;
 }
 
-.testimonial-message {
+.topProducts-description {
     font-size: 14px;
     color: #8b8b99;
     letter-spacing: 0.5px;
@@ -339,7 +331,7 @@ footer{
     margin: 0;
 }
 
-.testimonial-item h3 {
+.topProducts-item h3 {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
@@ -347,14 +339,14 @@ footer{
     margin-bottom: 0px;
 }
 
-.job-role {
+.topProducts-price {
     color: #8b8b99;
     font-size: 12px;
     font-style: italic;
     letter-spacing: 0.5px;
     margin: 0;
 }
-/* TESTIMONIALS SECTION STYLES END */
+/* TOPRODUCTS SECTION END */
 
 /* STORE SECTION STYLES START */
 #store-section {
@@ -406,7 +398,7 @@ footer{
     width: 100%;
     text-align: center;
     padding: 24px;
-    ;
+    
 }
 
 .icon-wrapper {
@@ -444,17 +436,22 @@ footer{
 }
 /* STORE SECTION STYLES ENDS */
 
-/*LOGIN AMDMIN PAGE DEBUT*/
+/*LOGIN ADMIN PAGE DEBUT*/
+.login-main{
+    height: 100%;
+    background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
+}
 #login-section{
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: black;
 }
 .loginBox{
     width: 25%;
+
     text-align: center;
     background-color: #f5f6fb;
     padding: 40px 30px;
@@ -465,11 +462,19 @@ footer{
     transition: box-shadow 0.3s;
 
 }
+.login-title{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 0px;
+}
 input{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    border-radius: 30px;
 }
 .button-login{
     font-size: 12px;
@@ -482,11 +487,97 @@ input{
     border-radius: 4px;
     margin-right: 16px;
     cursor: pointer;
-
 }
+.button-login:hover{
+    opacity: 0.7;
+}
+/*LOGIN ADMIN PAGE FIN*/
 
+/*CONTROL ADMIN PAGE DEBUT*/
+.adminControl-main{
+    height: 100%;
+    background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
+}
+#adminControl-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;  
+}
+.loadminControl-Box1{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.loadminControl-Box2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.loadminControl-Box3{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.loadminControl-Box4{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.loadminControl-Box5{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.adminControl-button {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: #1f618d  ;
+    padding: 9px 34px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.adminControl-button:hover {
+    opacity: 0.7;
+}
+.adminControl-button-deleteAdmin{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: #a93226 ;
+    padding: 9px 34px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.adminControl-button-deleteAdmin:hover{
+    opacity: 0.7;
+}
+.input-control-admin{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    
+}
+/*CONTROL ADMIN PAGE DEBUT*/
 
-/*LOGIN AMDMIN PAGE FIN*/
+/* */
 
 
 
@@ -494,25 +585,26 @@ input{
     width: 5%;
 }
 @media (max-width: 650px ){
-    #testimonials-section {
+    #topProducts-section {
         padding: 16px;
         box-sizing: border-box;
     }
 
-    #testimonials-section > h3 {
+    #topProducts-section > h3 {
        font-size: 28px; 
     }
 
-    #testimonials-wrapper {
+    #topProducts-wrapper {
         flex-direction: column;
     }
 
-    .testimonial-item {
+    .topProducts-item {
         width: 100%;
         box-sizing: border-box;
     }
 
-    .testimonial-by {
+    .topProducts-name {
         font-size: important 18px;
     }
+    
 }
