@@ -672,7 +672,6 @@ input{
 
 
 /*SUPPRIMER PRODUIT PAGE FIN*/
-
 .youtubeLogo{
     width: 5%;
 }
@@ -698,5 +697,8 @@ input{
     .topProducts-name {
         font-size: important 18px;
     }
-    
+    iframe{
+        width: 380px;
+        height: 200px;
+    }
 }
