@@ -29,7 +29,7 @@ $dataObject = $object->getObject('tablette');
                             <img src='.$dataObject[$i]["chemin_img"].' alt="" style="width:'.$dataObject[$i]["taille"].'%;">
                             <h3>'.utf8_encode($dataObject[$i]["titre"]).'</h3><h2>'.$dataObject[$i]["prix"].'€</h2>
                             <p>'.utf8_encode($dataObject[$i]["description"]).'</p>
-                            <p>'.utf8_encode($dataObject[$i]["date_sortie"]).'</p>';
+                            <p>'.utf8_encode($dataObject[$i]["date_sortie"]).'</p></div>';
                 }
                 ?>
                 </div>

@@ -23,15 +23,15 @@ $dataObject = $object->getObject('pc');
             <section id="store-section">
                 <h3>Les meilleurs PC portables du marché</h3>
                 <div id="store-items-wrapper">
-                <?php
-                for($i=0;$i<count($dataObject);$i++){
-                    echo '<div class="store-item">
-                            <img src='.$dataObject[$i]["chemin_img"].' alt="" style="width:'.$dataObject[$i]["taille"].'%;">
-                            <h3>'.utf8_encode($dataObject[$i]["titre"]).'</h3><h2>'.$dataObject[$i]["prix"].'€</h2>
-                            <p>'.utf8_encode($dataObject[$i]["description"]).'</p>
-                            <p>'.utf8_encode($dataObject[$i]["date_sortie"]).'</p>';
-                }
-                ?>
+                    <?php
+                    for($i=0;$i<count($dataObject);$i++){
+                        echo '<div class="store-item">
+                                <img src='.$dataObject[$i]["chemin_img"].' alt="" style="width:'.$dataObject[$i]["taille"].'%;">
+                                <h3>'.utf8_encode($dataObject[$i]["titre"]).'</h3><h2>'.$dataObject[$i]["prix"].'€</h2>
+                                <p>'.utf8_encode($dataObject[$i]["description"]).'</p>
+                                <p>'.utf8_encode($dataObject[$i]["date_sortie"]).'</p></div>';
+                    }
+                    ?>
                 </div>
             </section>
         </main>
