@@ -3,15 +3,13 @@
   $object = new Object();
   $data = $object->getText();
   $dataDefault = array();
-  if($data === false){
-    $dataDefault['titre'] = 'Bienvenue sur notre blog tech';
-    $dataDefault['cat1'] = 'Smartphones';
-    $dataDefault['cat2'] = 'Tablettes';
-    $dataDefault['cat3'] = 'PC';
-    $dataDefault['des1'] = 'En 2015, il s\'est vendu 1,4 milliard de smartphones dans le monde (source : IDC). Samsung occupait la tête des ventes suivi d\'Apple et de plusieurs marques chinoises (Huawei, Lenovo, Xiaomi).';
-    $dataDefault['des2'] = 'Tablette (de l\'anglais tablet, plaque) est le nom donné à une famille d\'ordinateurs portables dépourvus de clavier à touches et munis d\'un écran tactile, de la même dimension qu\'une feuille A4 ou plus petits. L\'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés.';
-    $dataDefault['des3'] = 'Ordinateur tout-en-un que l\'on peut déplacer en raison de sa taille compacte et de la présence d\'une batterie qui lui permet de fonctionner un moment sans avoir besoin de source d\'alimentation. L\'ordinateur portable est à la fois une unité centrale, un écran, un clavier et une souris.';
-  }
+  $dataDefault['titre'] = 'Bienvenue sur notre blog tech';
+  $dataDefault['cat1'] = 'Smartphones';
+  $dataDefault['cat2'] = 'Tablettes';
+  $dataDefault['cat3'] = 'PC';
+  $dataDefault['des1'] = 'En 2015, il s\'est vendu 1,4 milliard de smartphones dans le monde (source : IDC). Samsung occupait la tête des ventes suivi d\'Apple et de plusieurs marques chinoises (Huawei, Lenovo, Xiaomi).';
+  $dataDefault['des2'] = 'Tablette (de l\'anglais tablet, plaque) est le nom donné à une famille d\'ordinateurs portables dépourvus de clavier à touches et munis d\'un écran tactile, de la même dimension qu\'une feuille A4 ou plus petits. L\'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés.';
+  $dataDefault['des3'] = 'Ordinateur tout-en-un que l\'on peut déplacer en raison de sa taille compacte et de la présence d\'une batterie qui lui permet de fonctionner un moment sans avoir besoin de source d\'alimentation. L\'ordinateur portable est à la fois une unité centrale, un écran, un clavier et une souris.';
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +24,7 @@
             <div id="main-text-wrapper">
                 <h1>
                 <?php
-                  if($data === false){
+                  if(empty($data[0]['titre'])){
                     echo $dataDefault['titre'];
                   }else{
                     echo utf8_encode($data[0]['titre']);
@@ -42,7 +40,7 @@
             <div id="first-product" class="product-item">
                 <h3>
                 <?php
-                  if($data === false){
+                  if(empty($data[0]["cat1"])){
                     echo $dataDefault["cat1"];
                   }else{
                     echo utf8_encode($data[0]["cat1"]);
@@ -51,7 +49,7 @@
                 </h3>
                 <p>
                 <?php
-                  if($data === false){
+                  if(empty($data[0]["des1"])){
                     echo $dataDefault["des1"];
                   }else{
                     echo utf8_encode($data[0]["des1"]);
@@ -62,7 +60,7 @@
             <div id="second-product" class="product-item">
                 <h3>
                 <?php
-                  if($data === false){
+                  if(empty($data[0]['cat2'])){
                     echo $dataDefault['cat2'];
                   }else{
                     echo utf8_encode($data[0]['cat2']);
@@ -71,7 +69,7 @@
                 </h3>
                 <p>
                 <?php
-                  if($data === false){
+                  if(empty($data[0]["des2"])){
                     echo $dataDefault["des2"];
                   }else{
                     echo utf8_encode($data[0]["des2"]);
@@ -82,7 +80,7 @@
             <div id="third-product" class="product-item">
                 <h3>
                 <?php
-                  if($data === false){
+                  if(empty($data[0]['cat3'])){
                     echo $dataDefault['cat3'];
                   }else{
                     echo utf8_encode($data[0]['cat3']);
@@ -91,7 +89,7 @@
                 </h3>
                 <p>
                 <?php
-                  if($data === false){
+                  if(empty($data[0]["des3"])){
                     echo $dataDefault["des3"];
                   }else{
                     echo utf8_encode($data[0]["des3"]);
