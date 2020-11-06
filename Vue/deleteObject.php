@@ -8,7 +8,7 @@ $dataObjectTab = $object->getObject('tablette');
 
 <html>
   <head>
-    <title>Suppression objet</title>
+    <title>Supprimer produit</title>
     <link href="style/style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../Script/actionObject.js"></script>
   </head>

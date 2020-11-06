@@ -7,7 +7,7 @@ $dataObject = $object->getObject('pc');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TITRE SITE WEB</title>
+        <title>PC</title>
         <link href="style/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>

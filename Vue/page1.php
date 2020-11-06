@@ -7,7 +7,7 @@ $dataObject = $object->getObject('tel');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TITRE SITE WEB</title>
+        <title>Smartphones</title>
         <link href="style/style.css" rel="stylesheet" type="text/css">
     </head>
     <body onload="changeHeader()" >

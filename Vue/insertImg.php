@@ -24,8 +24,7 @@
                       </div>
                     </form>
             </section>
-        </main>    
-        
+        </main>         
   </body>
   <script type="text/javascript">
         function changeHeader(){

@@ -7,7 +7,7 @@ $dataObject = $object->getObject('tablette');
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TITRE SITE WEB</title>
+        <title>Tablettes</title>
         <link href="style/style.css" rel="stylesheet" type="text/css">
     </head>
     <body onload="changeHeader()">
