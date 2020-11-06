@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 31 oct. 2020 à 15:48
+-- Généré le :  ven. 06 nov. 2020 à 09:58
 -- Version du serveur :  5.7.17
 -- Version de PHP :  7.1.3
 
@@ -64,9 +64,6 @@ CREATE TABLE `objet` (
 --
 
 INSERT INTO `objet` (`id`, `titre`, `prix`, `description`, `categorie`, `date_sortie`, `chemin_img`, `taille`, `display`) VALUES
-(24, 'Test', 150, 'des', 'tablette', '25', 'assets/backiee-98646.jpg', 50, 1),
-(23, 'Objet pc', 250, 'des', 'pc', '54', 'assets/photos-hardware-02-20090608.jpg', 60, 1),
-(22, 'Object tab', 150, 'des', 'tel', '05/25/2502', 'assets/photos-hardware-02-20090608.jpg', 50, 1),
 (25, 'Iphone 11 pro', 1000, 'DESCRIPTION', 'tel', 'Date sortie : 20/09/2019', 'assets/iphone11Pro.png', 30, 1),
 (26, 'Google Pixel 4a', 349, 'DESCRIPTION', 'tel', 'Date sortie : 01/10/2020', 'assets/GooglePixel4a.png', 30, 1),
 (27, 'Samsung ZFold 2', 2000, 'DESCRIPTION', 'tel', 'Date sortie : 18/09/2020', 'assets/zfold.png', 30, 1),
@@ -102,7 +99,7 @@ CREATE TABLE `text` (
 --
 
 INSERT INTO `text` (`id`, `titre`, `cat1`, `cat2`, `cat3`, `des1`, `des2`, `des3`) VALUES
-(1, 'Bienvenue sur notre blog tech', 'Smartphones', 'Tablettes', 'PC', 'En 2015, il s\'est vendu 1,4 milliard de smartphones dans le monde (source : IDC). Samsung occupait la tête des ventes suivi d\'Apple et de plusieurs marques chinoises (Huawei, Lenovo, Xiaomi).\r\n    ', 'Tablette (de l\'anglais tablet, plaque) est le nom donné à une famille d\'ordinateurs portables dépourvus de clavier à touches et munis d\'un écran tactile, de la même dimension qu\'une feuille A4 ou plus petits. L\'écran tactile est toujours multipoints, donc capable de détecter plusieurs touchers simultanés.', 'Ordinateur tout-en-un que l\'on peut déplacer en raison de sa taille compacte et de la présence d\'une batterie qui lui permet de fonctionner un moment sans avoir besoin de source d\'alimentation. L\'ordinateur portable est à la fois une unité centrale, un écran, un clavier et une souris.');
+(1, '', '', '', '', '', '', '');
 
 --
 -- Index pour les tables déchargées
@@ -136,12 +133,12 @@ ALTER TABLE `text`
 -- AUTO_INCREMENT pour la table `administrateur`
 --
 ALTER TABLE `administrateur`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT pour la table `objet`
 --
 ALTER TABLE `objet`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT pour la table `text`
 --
