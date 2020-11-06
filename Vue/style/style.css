@@ -172,11 +172,10 @@ header{
     background-color: #141414;
 }
 
-
 #third-product {
     background-color: #141414;
 }
-/* STEPS SECTION STYLES END */
+/* PRODUCT SECTION STYLES END */
 
 .carrousel-section {
     width: 100%;
@@ -271,7 +270,7 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* TOPPROPDUCTS SECTION  START */
+/* TOP PROPDUCTS SECTION  START */
 #topProducts-section {
     width: 100%;
     padding-top: 75px;
@@ -349,7 +348,7 @@ footer{
     letter-spacing: 0.5px;
     margin: 0;
 }
-/* TOPRODUCTS SECTION END */
+/* TOP PRODUCTS SECTION END */
 
 /* STORE SECTION STYLES START */
 #store-section {
@@ -437,9 +436,9 @@ footer{
     font-weight: 500;
     color: #8b8b99;
 }
-/* STORE SECTION STYLES ENDS */
+/*STORE SECTION STYLES END */
 
-/*LOGIN ADMIN PAGE DEBUT*/
+/*LOGIN ADMIN PAGE START*/
 .login-main{
     height: 100%;
     background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
@@ -493,9 +492,9 @@ input{
 .button-login:hover{
     opacity: 0.7;
 }
-/*LOGIN ADMIN PAGE FIN*/
+/*LOGIN ADMIN PAGE END*/
 
-/*CONTROL ADMIN PAGE DEBUT*/
+/*CONTROL ADMIN PAGE START*/
 .adminControl-main{
     height: 100%;
     background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
@@ -593,7 +592,9 @@ input{
 .back-button:hover{
     opacity: 0.8;
 }
-/*CONTROL ADMIN PAGE DEBUT*/
+/*CONTROL ADMIN PAGE END*/
+
+/*CREATE PRODUCT PAGE START*/
 .createProduct-main{
     height: 100%;
     background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
@@ -618,7 +619,9 @@ input{
     flex-direction: column;
     align-items: center;  
 }
-/*SUPPIMER PRODUIT PAGE DEBUT*/
+/*CONTROL ADMIN PAGE END*/
+
+/*DELETE PRODUCT PAGE START*/
 .deleteProduct-main{
     height: 100%;
     background: linear-gradient(  #5d6d7e ,  #ecf0f1 );
@@ -668,10 +671,8 @@ input{
     background-color: #1f618d;
     color: white;
 }
+/*DELETE PRODUCT PAGE END*/
 
-
-
-/*SUPPRIMER PRODUIT PAGE FIN*/
 .youtubeLogo{
     width: 5%;
 }
